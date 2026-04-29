@@ -1,5 +1,7 @@
 # peter-evans/create-issue-from-file
 
+A GitHub action to create an issue using content from a file
+
 Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at [https://github.com/peter-evans/create-issue-from-file](https://github.com/peter-evans/create-issue-from-file).
 
 ## Versions
