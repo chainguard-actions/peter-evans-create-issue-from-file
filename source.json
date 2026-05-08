@@ -1,4 +1,6 @@
 {
-  "upstream": "peter-evans/create-issue-from-file",
-  "version": "v6.0.0"
+  "owner": "peter-evans",
+  "repo": "create-issue-from-file",
+  "version": "",
+  "url": "https://github.com/peter-evans/create-issue-from-file"
 }
