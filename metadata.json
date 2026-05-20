@@ -1,7 +1,0 @@
-{
-  "owner": "peter-evans",
-  "name": "create-issue-from-file",
-  "visibility": "internal",
-  "description": "A GitHub action to create an issue using content from a file",
-  "block_publish": false
-}
