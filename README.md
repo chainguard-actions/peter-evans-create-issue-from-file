@@ -8,7 +8,7 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 | Version | Tag | Upstream commit |
 |---------|-----|-----------------|
-| v6.0.0 | [`v6.0.0`](https://github.com/chainguard-actions/create-issue-from-file/tree/v6.0.0) | — |
+| v6.0.0 | [`v6.0.0`](https://github.com/chainguard-actions/peter-evans--create-issue-from-file/tree/v6.0.0) | — |
 
 ## Privacy
 
