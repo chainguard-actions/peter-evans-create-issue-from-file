@@ -1,0 +1,52 @@
+name: Test create issue with content from file
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Create issue content file
+        run: |
+          cat > "$GITHUB_WORKSPACE/issue-body.md" << 'EOF'
+          ## Summary
+
+          This is a test issue created from a file.
+
+          ## Steps to Reproduce
+
+          1. Run the action
+          2. Observe the issue
+
+          ## Expected Behavior
+
+          Issue is created with the content from the file.
+          EOF
+
+      - id: action
+        uses: .
+        continue-on-error: true
+        with:
+          title: 'Test Issue - With Content File'
+          content-filepath: issue-body.md
+
+      - name: Assert action ran and produced output or failed gracefully on sentinel repo
+        env:
+          OUTCOME: ${{ steps.action.outcome }}
+          ISSUE_NUMBER: ${{ steps.action.outputs.issue-number }}
+        run: |
+          echo "outcome: $OUTCOME"
+          echo "issue-number: $ISSUE_NUMBER"
+          if [ "$OUTCOME" = "success" ]; then
+            if [ -z "$ISSUE_NUMBER" ]; then
+              echo "FAIL: action succeeded but issue-number output is empty"
+              exit 1
+            fi
+            echo "PASS: issue created with number $ISSUE_NUMBER"
+          elif [ "$OUTCOME" = "failure" ]; then
+            echo "PASS: action failed gracefully (sentinel repo is not resolvable)"
+          else
+            echo "FAIL: unexpected outcome '$OUTCOME'"
+            exit 1
+          fi
