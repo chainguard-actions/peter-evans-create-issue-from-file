@@ -4,8 +4,13 @@
   "version": "v6.0.0",
   "commit_sha": "fca9117c27cdc29c6c4db3b86c48e4115a786710",
   "url": "https://github.com/peter-evans/create-issue-from-file",
-  "policy_sha": "d636be7e43ef829af6e853da6b3c7566db9f72fe",
+  "policy_sha": "374911c4be584df24e6da57af2d990570ef0f859",
   "test_policy_sha": "843adf9e4b8f85d0c08b27b9d0b09dd094b54702",
   "test_agent_version": "2",
-  "harden_agent_version": "2"
+  "harden_agent_version": "2",
+  "dist_artifact": {
+    "gcs_uri": "gs://patch-actions-node-artifacts/dist-artifacts/peter-evans/create-issue-from-file/v6.0.0/sha256-541282efd8ffaf9d6d272a1ca01c14af852112fde2b4bdb9b3f71b0f0e3e932c.tar.gz",
+    "sha256": "541282efd8ffaf9d6d272a1ca01c14af852112fde2b4bdb9b3f71b0f0e3e932c",
+    "size_bytes": 269505
+  }
 }
